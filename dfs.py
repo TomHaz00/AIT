@@ -3,12 +3,12 @@ def dfs(grid, start, goal):
     cols = len(grid[0])
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
-    stack = [(start[0], start[1], 0)]  # Stack for DFS
-    visited = []  # Visited list
+    stack = [(start[0], start[1], 0)]
+    visited = []
     visited.append(start)
 
     while stack:
-        x, y, distance = stack.pop()  # Use pop to take the last added element
+        x, y, distance = stack.pop()
 
         if (x, y) == goal:
             return distance, visited, stack
